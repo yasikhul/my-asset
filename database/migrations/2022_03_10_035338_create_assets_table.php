@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('assets', function (Blueprint $table) {
             $table->id();
+            $table->string('manufacture');
+            $table->string('model');
+            $table->string('assignee');
+            $table->string('department');
             $table->timestamps();
         });
     }

@@ -19,10 +19,23 @@
                                 <th>Model</th>
                                 <th>Assignee</th>
                                 <th>Dept</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                               
+                              @php
+                                  $no=1;
+                              @endphp
+                               @foreach ($data as $item)
+                                  <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td> {{ $item->manufacture }} </td>
+                                    <td> {{ $item->model }} </td>
+                                    <td> {{ $item->assignee }} </td>
+                                    <td> {{ $item->department }} </td>
+                                    <td><a href="#" class="btn btn-success">Edit</a>&nbsp;<a href="#" class="btn btn-danger">Delete</a></td>
+                                  </tr>
+                               @endforeach
                         </tbody>
                     </table>
               </div>
